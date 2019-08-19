@@ -18,7 +18,7 @@ class Block {
 		int64_t nonce;
 		string data;
 		string hash;
-		time_t time;
+		time_t timestamp;
 
 		string calculateHash() const;
 };
