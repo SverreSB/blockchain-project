@@ -13,6 +13,8 @@ class Block {
 		
 		void mineBlock(uint32_t difficulty);
 
+		void display();
+
 	private:
 		uint32_t index;
 		int64_t nonce;

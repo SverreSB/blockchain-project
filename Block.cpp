@@ -1,6 +1,6 @@
 #include <sstream>
 #include "Block.h"
-#include "sha256.h"
+#include "sha/sha256.cpp"
 
 using namespace std;
 
@@ -37,4 +37,13 @@ string Block::calculateHash() const {
     ss << index << timestamp << data << nonce << prevHash;
  
     return sha256(ss.str());
+}
+
+void Block::display() {
+	cout << "Block: " << endl;
+	cout << "	Index: " << index << endl;
+	cout << "	Nonce: " << nonce << endl;
+	cout << "	Hash: " << hash << endl;
+	cout << "	Data: " << data << endl;
+	cout << "	Timestamp: " << timestamp << endl;
 }
